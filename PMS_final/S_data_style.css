@@ -1,0 +1,27 @@
+.table {
+    border-collapse:collapse;
+    min-width:350px;
+    margin:25px 0;
+    font-size:0.9em;
+}
+
+.table thead tr{
+    background-color:rgb(113, 221, 185);
+    color:white;
+    text-align: left;
+    font-weight: bold;
+}
+
+.table th,
+.table td{
+    padding:12px 15px;
+    
+
+}
+
+.table tr{
+    
+    border-bottom: 3px solid #000000;
+    
+    
+}

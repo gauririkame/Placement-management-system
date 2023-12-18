@@ -1,0 +1,53 @@
+.logo{
+    display: block;
+   margin-left: auto;
+   margin-right: auto;
+   width: 30%;
+   padding-top: 70px;   
+   
+   
+}
+
+
+
+.student{
+    padding-top: 70px;
+    
+}
+
+.college{
+    margin-top: 70px;
+
+}
+
+.one{
+    float: left;
+    width: 33.33%;
+    padding-right: 50px;
+    text-align: center;
+    
+}
+
+.two{
+    float: right;
+    width: 33.33%;   
+    
+}
+
+#id1{
+    position: relative;
+    text-align: center;
+    margin: 5px;
+    margin-left: 50px;
+    color: white;
+    
+}
+
+#id2{
+    position: relative;
+    text-align:center;
+    margin: 5px;
+    margin-left: 45px;
+    color: white;
+    
+}

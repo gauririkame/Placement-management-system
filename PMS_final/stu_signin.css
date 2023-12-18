@@ -1,0 +1,104 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    background-color:#6abadeba;
+    font-family: 'Arial';
+    text-align: center;
+}
+.login{
+        width: 382px;
+        overflow: hidden;
+        margin: auto;
+        margin: 20 0 0 450px;
+        margin-top:0;
+        padding: 80px;
+        background: #23453d;
+        border-radius: 15px ;
+
+}
+h1{
+    text-align: center;
+    color: #0e4751;
+    padding-top:5px;
+    margin-top:0px;
+}
+label{
+    color: #08ffd1;
+    font-size: 17px;
+}
+#Uname{
+    width: 200px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+}
+#Pass{
+    width: 200px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+
+}
+
+#CPass{
+    width: 200px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+
+}
+
+#log:hover{
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 17px;
+    padding-left: 7px;
+    color: blue;
+    font-weight: bold;
+
+}
+span{
+    color: white;
+    font-size: 10px;
+}
+a{
+    float: right;
+    background-color:grey;
+}
+
+.btn{
+    color: #fff;
+    padding: 12px 25px;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: #f15048;
+    margin-right: 30px;
+    margin-left: 60px;
+    margin-top: 20px;
+}
+
+.btn2{
+    color: #fff;
+    padding: 12px 25px;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: #1f1cc3;
+    margin-right: 120px;
+    margin-top: 30px;
+}
+.btn:hover{
+    background-color: #4399fa;
+    transition: 0.5s ease;
+}
+
+.btn2:hover:hover{
+    background-color: #4399fa;
+    transition: 0.5s ease;
+}

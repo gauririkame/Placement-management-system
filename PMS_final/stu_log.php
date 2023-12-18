@@ -1,0 +1,90 @@
+<?php
+session_start();
+$servername = "localhost";
+$username = "root";
+$password = "";
+$database = "login";
+$conn = mysqli_connect($servername, $username, $password, $database);
+
+if (!$conn) {
+    die("error detected" . mysqli_connect_error());
+}
+// } else {
+//     echo "connection established successfully ";
+// }
+echo "<br>";
+echo "<br>";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $Uname = $_POST["Uname"];
+    $Pass = $_POST["Pass"];
+   
+
+    $exists = false;
+
+    // checking credentials
+    $sql="select * from signin where Uname='$Uname' AND Pass='$Pass' ";
+
+    $result = mysqli_query($conn, $sql);
+    $num=mysqli_num_rows($result);
+    if ($num>0)
+    {
+        
+        session_start();
+        $_SESSION['loggedin'] = true;
+        $_SESSION['Uname'] = $Uname;
+        header("location:welcome_stu.php");
+
+
+    }
+    else
+    {
+        // echo "Welcome ";
+        echo "password invalid !!";
+    }
+} 
+
+
+?>
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login </title>
+
+    <link rel="stylesheet" href="stu_log.css">
+
+
+<body>
+    <h1>Student Login </h1><br>
+    <div class="login" id="login">
+        <!-- <form action="/learn/signin.php" method="post"> -->
+        <form action="/pms_final/stu_log.php" method="post">
+            <label><b>User Name</b></label>
+            <input type="text" name="Uname" id="Uname" placeholder="Username" required>
+            <br><br>
+            <label><b>Password</b></label>
+            <input type="password" name="Pass" id="Pass" placeholder="Password" required>
+            <br><br>
+            </label>
+            
+
+            <br><br>
+            <div class="button container" id="button container">
+                <b>
+                    <button type="submit" class="btn" id="btn">Log In</button>
+                </b>
+            </div>
+
+        </form>
+    </div>
+
+
+</body>
+
+</html>

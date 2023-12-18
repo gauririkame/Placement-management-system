@@ -1,0 +1,71 @@
+<?php
+session_start();
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+$database = "login";
+$conn = mysqli_connect($servername, $username, $password, $database);
+
+if(!isset($conn)){
+    echo "Not Correct";
+}
+
+$Uname = $_POST["Uname"];
+$Pass = $_POST["Pass"];
+
+$sql="select * from signin where Uname='$Uname' AND Pass='$Pass' ";
+$result = mysqli_query($conn,$sql);
+$present = mysqli_num_rows($result);
+
+if($present>0){
+    $SESSION['Uname_alert']='1';
+} else{
+     $query="INSERT INTO signin(Uname, Pass) VALUES ($Uname, $Pass)" ;
+     $results=mysqli_query($conn,$query);
+     
+     header("Location:welcome_stu.php");
+}
+
+
+
+?>
+
+<html>
+
+<head>
+    <title>Login </title>
+
+    <link rel="stylesheet" href="stu_log.css">
+
+
+<body>
+    <h1>Student Login </h1><br>
+    <div class="login" id="login">
+        <!-- <form action="/learn/signin.php" method="post"> -->
+        <form action="/pms_final/stu_log.php" method="post">
+            <label><b>User Name</b></label>
+            <input type="text" name="Uname" id="Uname" placeholder="Username" required>
+            <br><br>
+            <label><b>Password</b></label>
+            <input type="password" name="Pass" id="Pass" placeholder="Password" required>
+            <br><br>
+            </label>
+            
+
+            <br><br>
+            <div class="button container" id="button container">
+                <b>
+                    <button type="submit" class="btn" id="btn">Sign-In</button>
+                </b>
+            </div>
+
+        </form>
+    </div>
+    <?php
+        unset($_SESSION["Uname_alert"])
+    ?>
+
+</body>
+
+</html>

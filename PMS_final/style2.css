@@ -1,0 +1,85 @@
+.body{
+    /* background-image: url("hand.jpg"); */
+    /* opacity:1; */
+    /* background-color: rgba(255, 255, 255, 0.5) */
+    background-color:rgb(127, 172, 173);
+    background-size: cover;
+    overflow:hidden
+}
+
+
+.body h1{
+    text-align: center;
+}
+
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+    text-align: left;
+
+}
+
+.navbar a {
+    float: right;
+    /* display: inline-block; */
+    color: white;
+    /* text-align: right; */
+    padding: 14px 190px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float:right ;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 210px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    /* border:1px solid black; */
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+} 
+
+/* Basic styling for the content */
+.content {
+    text-align: center; /* Center content horizontally */
+    padding-top: 150px;
+}
+
+/* Style the heading */
+.content h1 {
+    font-size: 24px; /* Adjust the font size as needed */
+}
+
+/* Style the paragraph and make it justified */
+.content p {
+    text-align: center; /* Justify the text */
+    font-size: 18px;
+    /* font-weight:bold; */
+}

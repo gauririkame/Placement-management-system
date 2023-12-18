@@ -1,0 +1,86 @@
+
+    body { 
+        margin: 0; 
+        padding: 0; 
+        font-family: Arial, Helvetica, sans-serif; 
+        color: aqua;
+    } 
+  
+    h1 { 
+        color: green; 
+    } 
+  
+    h1, 
+    h3 { 
+        text-align: center; 
+    } 
+  
+    ul { 
+        margin: 0; 
+        padding: 10px 0px 10px 100px; 
+        display: flex; 
+        background:skyblue; 
+    } 
+  
+    ul li { 
+        list-style: none; 
+        padding: 10px 20px; 
+  
+    } 
+  
+    ul li a { 
+        text-decoration: none; 
+        font-size: 24px; 
+        font-weight: bold; 
+        color: black; 
+        position: relative; 
+    
+  
+    } 
+  
+    ul li a::before { 
+        content: ""; 
+        width: 0px; 
+        height: 10px; 
+        background: black; 
+        position: absolute; 
+        top: 100%; 
+        left: 0; 
+        transition: .5s;
+    } 
+  
+    ul li a:hover::before { 
+        width: 50%; 
+        transform: translateX(100%); 
+    }  .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    /* Style for the dropdown content (hidden by default) */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: white;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    /* Style for the individual dropdown items */
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    /* Change the color of dropdown items when you hover over them */
+    .dropdown-content a:hover {
+        background-color: #f1f1f1;
+    }
+
+    /* Show the dropdown content when hovering over the dropdown container */
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
